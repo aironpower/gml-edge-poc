@@ -1,0 +1,7 @@
+[
+  { "id": 1, "timestamp": "08:00:00", "lat": 45.8100, "lon": 4.7500, "expected": "OUT" },
+  { "id": 2, "timestamp": "08:00:10", "lat": 45.8000, "lon": 4.7800, "expected": "OUT" },
+  { "id": 3, "timestamp": "08:00:20", "lat": 45.7850, "lon": 4.8050, "expected": "IN (Bordure)" },
+  { "id": 4, "timestamp": "08:00:30", "lat": 45.7600, "lon": 4.8357, "expected": "IN (Centre ZFE)" },
+  { "id": 5, "timestamp": "08:00:40", "lat": 45.7500, "lon": 4.8500, "expected": "IN" }
+]

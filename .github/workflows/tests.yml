@@ -1,0 +1,27 @@
+name: Tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  tests:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python: ["3.10", "3.13"]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Tests unitaires
+        run: python -m unittest -v
+      - name: Module 1 — ZFE
+        run: python -m gml_edge zfe
+      - name: Module 2 — Safety
+        run: python -m gml_edge safety
+      - name: Robustesse (aucun plantage)
+        run: python -m gml_edge robustesse

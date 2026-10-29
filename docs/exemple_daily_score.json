@@ -1,0 +1,74 @@
+{
+  "format": "gml.daily_score/1.0",
+  "vehicule_id": "GML-TRUCK-001",
+  "date": "2023-03-15",
+  "genere_le": "2026-10-29T15:53:20+00:00",
+  "source": "accelerometer_data.csv",
+  "periode": {
+    "debut_utc": "2023-03-15T11:33:20.000Z",
+    "duree_analysee_s": 10.0
+  },
+  "parametres": {
+    "unite": "m/s²",
+    "frequence_coupure_filtre_hz": 5.0,
+    "duree_min_evenement_s": 0.3,
+    "regles": [
+      {
+        "type": "FREINAGE_VIOLENT",
+        "axe": "acc_y",
+        "seuil_ms2": 2.5,
+        "relache_ms2": 1.5,
+        "seuil_critique_ms2": 4.0
+      },
+      {
+        "type": "ACCELERATION_BRUSQUE",
+        "axe": "acc_y",
+        "seuil_ms2": 2.5,
+        "relache_ms2": 1.5,
+        "seuil_critique_ms2": 4.0
+      },
+      {
+        "type": "VIRAGE_BRUSQUE",
+        "axe": "acc_x",
+        "seuil_ms2": 3.0,
+        "relache_ms2": 2.0,
+        "seuil_critique_ms2": 4.5
+      }
+    ],
+    "penalites": {
+      "ELEVE": 10,
+      "CRITIQUE": 20
+    },
+    "seuil_eligibilite_bonus": 80
+  },
+  "qualite_donnees": {
+    "lignes_lues": 10,
+    "lignes_valides": 10,
+    "lignes_rejetees": 0,
+    "motifs_rejet": {},
+    "pics_brefs_ignores": 0
+  },
+  "synthese": {
+    "score_securite": 90,
+    "niveau": "A",
+    "eligible_bonus_assurance": true,
+    "freinages_violents": 1,
+    "accelerations_brusques": 0,
+    "virages_brusques": 0
+  },
+  "evenements": [
+    {
+      "type": "FREINAGE_VIOLENT",
+      "libelle": "Freinage violent",
+      "horodatage": 1678880005.0,
+      "heure_utc": "2023-03-15T11:33:25.000Z",
+      "duree_s": 1.0,
+      "axe": "acc_y",
+      "pic_filtre_ms2": -3.37,
+      "pic_brut_ms2": -3.45,
+      "pic_g": 0.352,
+      "severite": "ELEVE",
+      "penalite": 10
+    }
+  ]
+}

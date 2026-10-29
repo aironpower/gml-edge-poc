@@ -1,0 +1,13 @@
+[
+  { "id": 1, "timestamp": "08:00:00", "lat": 45.8100, "lon": 4.7500 },
+  { "id": 2, "timestamp": "08:00:10", "lat": 45.8000, "lon": 4.7800 },
+  { "id": 3, "timestamp": "08:00:20", "lat": 45.7850, "lon": 4.8050 },
+  { "id": 4, "timestamp": "08:00:25", "lat": null, "lon": null, "note": "tunnel de Fourvière : plus de fix GPS" },
+  { "id": 5, "timestamp": "08:00:27", "lat": "NaN", "lon": 4.8200, "note": "trame NMEA corrompue" },
+  { "id": 6, "timestamp": "08:00:28", "lat": 945.76, "lon": 4.8300, "note": "latitude impossible" },
+  { "id": 7, "timestamp": "08:00:29", "lon": 4.8300, "note": "latitude absente" },
+  "trame illisible",
+  { "id": 9, "timestamp": "08:00:30", "lat": 45.7600, "lon": 4.8357 },
+  { "id": 10, "timestamp": "08:00:40", "lat": 45.7500, "lon": 4.8500 },
+  { "id": 11, "timestamp": "08:01:30", "lat": 45.7200, "lon": 4.9300, "note": "sortie de zone" }
+]
